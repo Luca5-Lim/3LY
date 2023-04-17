@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Habit</string>
+    <string name="home">Home</string>
+    <string name="habit">Habit</string>
+    <string name="timer">Timer</string>
+    <string name="todolist">To-do-list</string>
+    <string name="total_water">Total Water Drank:</string>
+    <string name="date">Date: </string>
+    <string name="time">Time</string>
+    <string name="amount">Amount</string>
+    <string name="approximately_equal">≈</string>
+    <string name="cup_desc">cup</string>
+    <string name="ml">ml</string>
+    <string name="water_string">How much water you drank?</string>
+</resources>

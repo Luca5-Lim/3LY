@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/habit_cl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HabitTracker">
+
+    <View
+        android:id="@+id/main_rectangle"
+        android:layout_width="350sp"
+        android:layout_height="150sp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/secondary_rectangle"
+        android:layout_width="400sp"
+        android:layout_height="350sp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/secondary_rectangle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_rectangle" />
+
+    <TextView
+        android:id="@+id/total_water_string"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/total_water"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@+id/main_rectangle"
+        app:layout_constraintRight_toRightOf="@+id/main_rectangle"
+        app:layout_constraintTop_toTopOf="@+id/main_rectangle" />
+
+    <TextView
+        android:id="@+id/total_water_ml"
+        android:layout_width="140sp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="60dp"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold|italic"
+        android:gravity="center_horizontal"
+        app:layout_constraintStart_toStartOf="@+id/main_rectangle"
+        app:layout_constraintTop_toTopOf="@+id/main_rectangle" />
+
+
+    <TextView
+        android:id="@+id/equal_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/approximately_equal"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintLeft_toLeftOf="@+id/main_rectangle"
+        app:layout_constraintRight_toRightOf="@+id/main_rectangle"
+        app:layout_constraintTop_toTopOf="@+id/main_rectangle" />
+
+    <TextView
+        android:id="@+id/total_water_cup"
+        android:layout_width="50sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="100dp"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="bold|italic"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/main_rectangle"
+        app:layout_constraintTop_toTopOf="@+id/main_rectangle" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="70dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginStart="5dp"
+        android:contentDescription="@string/cup_desc"
+        app:layout_constraintStart_toEndOf="@+id/total_water_cup"
+        app:layout_constraintTop_toTopOf="@+id/main_rectangle"
+        app:srcCompat="@drawable/cup" />
+
+    <ImageView
+        android:id="@+id/calendar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/calendar"
+        app:layout_constraintEnd_toEndOf="@+id/secondary_rectangle"
+        app:layout_constraintTop_toTopOf="@+id/secondary_rectangle"/>
+
+    <EditText
+        android:id="@+id/date_text"
+        android:layout_width="245sp"
+        android:layout_height="40sp"
+        android:layout_marginTop="12dp"
+        android:inputType="textNoSuggestions"
+        android:background="@null"
+        android:focusable="false"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toStartOf="@+id/calendar"
+        app:layout_constraintTop_toTopOf="@+id/secondary_rectangle" />
+
+    <TextView
+        android:id="@+id/date_string"
+        android:layout_width="wrap_content"
+        android:layout_height="40sp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/date"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/date_text"
+        app:layout_constraintTop_toTopOf="@+id/secondary_rectangle" />
+
+
+        <TableLayout
+            android:id="@+id/table_header"
+            android:layout_width="350sp"
+            android:layout_height="270sp"
+            android:layout_marginTop="60dp"
+            app:layout_constraintEnd_toEndOf="@+id/secondary_rectangle"
+            app:layout_constraintStart_toStartOf="@+id/secondary_rectangle"
+            app:layout_constraintTop_toTopOf="@+id/secondary_rectangle">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="175sp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border"
+                    android:gravity="center"
+                    android:text="@string/time"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/amount"
+                    android:layout_width="175sp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_border"
+                    android:gravity="center"
+                    android:text="@string/amount"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </TableRow>
+            <ScrollView
+                android:layout_width="350sp"
+                android:layout_height="270sp"
+                android:layout_weight="1"
+                app:layout_constraintEnd_toEndOf="@+id/secondary_rectangle"
+                app:layout_constraintStart_toStartOf="@+id/secondary_rectangle"
+                app:layout_constraintTop_toTopOf="@+id/table_header">
+                <TableLayout
+                    android:id="@+id/table_data"
+                    android:layout_width="350sp"
+                    android:layout_height="270sp"
+                    app:layout_constraintEnd_toEndOf="@+id/secondary_rectangle"
+                    app:layout_constraintStart_toStartOf="@+id/secondary_rectangle"
+                    app:layout_constraintTop_toTopOf="@+id/table_header">
+
+                </TableLayout>
+            </ScrollView>
+        </TableLayout>
+    <Button
+        android:id="@+id/insert_btn"
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="75dp"
+        android:background="@drawable/round_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/home_btn"
+            android:layout_width="0dp"
+            android:layout_height="60sp"
+            android:background="@color/secondary"
+            android:layout_weight="1"
+            android:text="@string/home"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+        <Button
+            android:id="@+id/habit_btn"
+            android:layout_width="0dp"
+            android:layout_height="60sp"
+            android:background="@color/main"
+            android:layout_weight="1"
+            android:text="@string/habit"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+        <Button
+            android:id="@+id/timer_btn"
+            android:layout_width="0dp"
+            android:layout_height="60sp"
+            android:background="@color/secondary"
+            android:layout_weight="1"
+            android:text="@string/timer"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+        <Button
+            android:id="@+id/todolist_btn"
+            android:layout_width="0dp"
+            android:layout_height="60sp"
+            android:background="@color/secondary"
+            android:layout_weight="1"
+            android:text="@string/todolist"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

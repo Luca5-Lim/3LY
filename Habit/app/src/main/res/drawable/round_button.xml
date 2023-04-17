@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+<item>
+    <shape xmlns:android="http://schemas.android.com/apk/res/android"
+        android:shape="rectangle">
+        <solid android:color="@color/secondary"/>
+        <corners android:radius="45dp"/>
+        <stroke android:color="@color/black" android:width="2dp"/>
+    </shape>
+</item>
+<item android:drawable="@drawable/water_drop"
+    android:bottom="10dp"
+    android:left="10dp"
+    android:right="10dp"
+    android:top="10dp"/>/>
+</layer-list>
